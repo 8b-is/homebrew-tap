@@ -1,4 +1,4 @@
-class DeepsipserEnthea < Formula
+class DeepsiperEnthea < Formula
   desc "enthea — the deepsiper-enthea engine entry (pure-stdlib Go)"
   homepage "https://github.com/8b-is/enthea"
   url "https://github.com/8b-is/enthea/archive/refs/tags/v0.1.0.tar.gz"
