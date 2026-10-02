@@ -14,6 +14,14 @@ class Qwave < Formula
 
   def install
     system "xcodegen", "generate", "--spec", "project.yml"
+    # Resolve the SPM packages with the SYSTEM scm provider first: Xcode's
+    # own sandboxed package resolution (`sandbox-exec`) cannot nest inside
+    # Homebrew's build sandbox and dies with "sandbox_apply: Operation not
+    # permitted". Resolving ahead of the build leaves nothing for the build
+    # step to re-resolve.
+    system "xcodebuild", "-resolvePackageDependencies", "-scmProvider", "system",
+      "-project", "Qwave.xcodeproj", "-scheme", "Qwave",
+      "-derivedDataPath", "build/DerivedData"
     arch = Hardware::CPU.arm? ? "arm64" : "x86_64"
     # Host-arch slice only (no cross toolchain needed), stable channel:
     # WebKit's defaults, no mem|16-10 link — Qwave's MIT posture.
@@ -24,6 +32,7 @@ class Qwave < Formula
       "-destination", "platform=macOS,arch=#{arch}",
       "-derivedDataPath", "build/DerivedData",
       "ONLY_ACTIVE_ARCH=YES",
+      "ENABLE_USER_SCRIPT_SANDBOXING=NO",
       "CODE_SIGNING_ALLOWED=NO", "CODE_SIGN_IDENTITY=",
       "build"
     prefix.install "build/DerivedData/Build/Products/Release/Qwave.app"
