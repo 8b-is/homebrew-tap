@@ -6,7 +6,9 @@ Formulae for the 8b.is constellation. Install an entry:
 brew tap 8b-is/tap
 brew install 8b-is/tap/deepsipser-enthea    # enthea — the engine entry (pure-stdlib Go)
 brew install 8b-is/tap/qwave               # Qwave browser, stable channel (tagged releases)
-brew install 8b-is/tap/qwave-nightly       # Qwave browser, nightly channel (tracks main)
+# qwave-nightly is HEAD-only — it always builds the latest main:
+brew install --HEAD 8b-is/tap/qwave-nightly  # Qwave browser, nightly channel
+brew upgrade --fetch-HEAD 8b-is/tap/qwave-nightly  # re-pull latest main
 ```
 
 The Qwave formulae build from source on your machine (`xcodegen` +

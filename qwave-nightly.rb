@@ -41,8 +41,8 @@ class QwaveNightly < Formula
       or link it into /Applications yourself:
         ln -s #{opt_prefix}/Qwave.app /Applications/Qwave.app
 
-      Upgrade to the latest main with the usual Homebrew command:
-        brew upgrade qwave-nightly
+      Upgrade to the latest main with:
+        brew upgrade --fetch-HEAD qwave-nightly
     EOS
   end
 end
