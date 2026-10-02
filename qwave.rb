@@ -3,10 +3,10 @@ class Qwave < Formula
   homepage "https://github.com/8b-is/qwave"
   license "MIT"
 
-  # Pinned to the post-Rust-core commit; moves to the v2.0.0 tag tarball with
-  # the first tagged release (docs/RELEASING.md in the main repository).
-  url "https://github.com/8b-is/qwave/archive/52fc82f.tar.gz"
-  sha256 "099539fef5c08b3a7b8c7a67540dacd4b47da370e8a2f00d384f964e3871bf63"
+  # The v2.0.0 stable release — the Rust-core era. Moves with each tagged
+  # release (docs/RELEASING.md in the main repository).
+  url "https://github.com/8b-is/qwave/archive/refs/tags/v2.0.0.tar.gz"
+  sha256 "2eaa8f5dedc1584dc15ee623eef9b509ee52d8a5eb37f9185faf433e6b85db74"
 
   depends_on xcode: ["16.0", :build]
   depends_on "rust" => :build
