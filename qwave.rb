@@ -3,10 +3,10 @@ class Qwave < Formula
   homepage "https://github.com/8b-is/qwave"
   license "MIT"
 
-  # The v2.0.1 stable release. Moves with each tagged release
+  # The v2.0.2 stable release. Moves with each tagged release
   # (docs/RELEASING.md in the main repository).
-  url "https://github.com/8b-is/qwave/archive/refs/tags/v2.0.1.tar.gz"
-  sha256 "21474761c5d7e4866e398eab7047b8c8da3d94563a78f3806d514d9ca446ba35"
+  url "https://github.com/8b-is/qwave/archive/refs/tags/v2.0.2.tar.gz"
+  sha256 "846eab08e23b878f331a129ebbb446f6760644f0e601e6a8c928e794f420006e"
 
   depends_on xcode: ["16.0", :build]
   depends_on "rust" => :build
