@@ -1,6 +1,6 @@
 cask "qwave" do
-  version "2.0.3"
-  sha256 "278b976254091dfff994e4b847e50ec8e181dfe9b3d08a644bc16dbbe1a6b82b"
+  version "2.0.4"
+  sha256 "a8236959cc1ee5750df13cb434a3488b51303f96809eaecc5a72efa3f36063e3"
 
   url "https://github.com/8b-is/qwave/releases/download/v#{version}/Qwave-v#{version}.dmg",
       verified: "github.com/8b-is/qwave/"
