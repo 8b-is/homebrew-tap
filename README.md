@@ -4,7 +4,7 @@ Formulae and casks for the 8b.is constellation:
 
 ```sh
 brew tap 8b-is/tap
-brew install 8b-is/tap/deepsipser-enthea    # enthea — the engine entry (pure-stdlib Go)
+brew install 8b-is/tap/deepsiper-enthea    # enthea — the engine entry (pure-stdlib Go)
 
 # Qwave, the WebKit-native browser that proves what it sends:
 brew install --cask 8b-is/tap/qwave            # stable: signed, notarised DMG
